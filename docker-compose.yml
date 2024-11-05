@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  whatsapp-history-service:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - EVOLUTION_API_URL=${EVOLUTION_API_URL}
+      - EVOLUTION_API_KEY=${EVOLUTION_API_KEY}
+      - API_SECRET_KEY=${API_SECRET_KEY}
+    command: >
+      sh -c "npm install && npm start"
+    restart: unless-stopped
+
+networks:
+  default:
+    name: whatsapp-history-network

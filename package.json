@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-history-service",
+  "version": "1.0.0",
+  "description": "Serviço para armazenar histórico de conversas do WhatsApp no Supabase",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.21.0",
+    "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
